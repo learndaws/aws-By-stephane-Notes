@@ -86,3 +86,13 @@ Three ways users can access AWS:
 -> AWS Management console (Password + MFA)
 -> AWS CLI (Protected by Access and secret Keys)
 -> AWS Software Development Kit (SDK) (For Code: Protected by Access and secret Keys)
+
+------------------------------------------------------------------------------------------------------
+
+Two IAM Security Tools:
+
+-> IAM Credentials Report (Account-level)
+        * A report that lists all your account's users and the status of their various credentials.
+
+-> IAM Access Advisor (User-level)
+        * It shows the service permissions granted to the user and when those services were last used.
