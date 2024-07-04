@@ -1,0 +1,88 @@
+Three main deployment models of cloud:
+
+-> Private Cloud
+-> Public Cloud
+-> Hybrid Cloud
+
+------------------------------------------------------------------------------------------------------
+
+Five characteristics of Cloud computing:
+
+-> On-demand Selfservice
+-> Broad Network Access 
+-> Multi-tenancy and resource pooling
+-> Rapid elasticity and scalability
+-> Measured units
+
+------------------------------------------------------------------------------------------------------
+
+Six advantages of cloud computing:
+
+-> Trade capital expense(CAPEX) over operational expence(OPEX) 
+-> Benefit from massive economies of scale
+-> stop guessing capacity
+-> Increase speed and agility
+-> Stop spending money running and maintaining the datacenters
+-> Go global in minutes: leverage the AWS global infrastructure
+
+------------------------------------------------------------------------------------------------------
+
+Four different types of cloud computing:
+
+-> infrastructure as a Service (Iaas) 
+          Example from AWS : Ec2 instance
+        Example from Others: Azure, GCP, Rackspace, Digital Ocean, Linode
+
+-> Platform as a Service (PaaS) 
+          Example from AWS : Elastic Beanstalk
+        Example from Others: Heroku, Google App Engine(GCP), Windows Azure(Microsoft)
+
+-> Software as a Service (SaaS)
+          Example from AWS : Many like Rekognition for Meachine Learning
+        Example from Others: Google Apps(Gmail), Dropbox, Zoom
+
+-> Function as a Service (Faas)
+          Example from AWS : Lambda
+        Example from Others: "Need to update"
+
+------------------------------------------------------------------------------------------------------
+
+Three pricing fundamentals of Cloud (Pay-as-you-go):
+
+Computing - Pay for compute time
+Storage - Pay for on the amount of data stored
+Netowrking - Pay for only data transfer out of the cloud.. Incoming traffic data is free
+
+------------------------------------------------------------------------------------------------------
+
+How to choose the region for Application deployment:
+
+-> Based on Compliance with data governance and legal requirements
+-> Proximity to customers: Reduced latency
+-> Service availability in a choosen region
+-> Pricing of the region
+
+------------------------------------------------------------------------------------------------------
+
+Four MFA device options in AWS:
+
+-> Virtual MFA device 
+        Example: Google Authenticator from Google
+                 Authy from AWS 
+                
+-> Universal 2nd Factor(U2F) Security Key
+        Example: Yubikey from Yubico (Yubico is 3rd party to Amazon)
+
+-> Hardware Key Fob MFA device
+        Example: It's from Gemalto (3rd party)
+
+-> Hardware Key Fob MFA device for AWS GovCloud (US)
+        Example: It's from SurePassID (3rd party)
+
+------------------------------------------------------------------------------------------------------
+
+Three ways users can access AWS:
+
+-> AWS Management console (Password + MFA)
+-> AWS CLI (Protected by Access and secret Keys)
+-> AWS Software Development Kit (SDK) (For Code: Protected by Access and secret Keys)
