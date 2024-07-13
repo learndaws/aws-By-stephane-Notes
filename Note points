@@ -152,4 +152,18 @@ EBS snapshot Features:
         * Setup rules to retain deleted snapshops so you can recover them after an accidental deletion.
         * Specify retention (from 1 day to 1 year)
 
+------------------------------------------------------------------------------------------------------
+
+Amazon S3 usecases:
+
+1) Backup and Storage
+2) Disaster Recovery
+3) Archive
+4) Hybrid Cloud Storage
+5) Application hosting
+6) Media hosting
+7) Data lakes and Big data analysis
+8) Software delivery
+9) Static website
+
                 
