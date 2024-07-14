@@ -166,4 +166,95 @@ Amazon S3 usecases:
 8) Software delivery
 9) Static website
 
+------------------------------------------------------------------------------------------------------
+
+S3 Storage Classes:
+
+1) Amazone S3 Standard - General Purpose
+        * 99.99% Availability
+        * used for frequently accessed data
+        * low latency and high throughput
+        * sustain 2 concurrent facility failures
+        * Use Cases: Big Data Analytics, Mobile and Gaming Applications, Content distribution..
+
+2) Infrequent Access (IA)
+        * Data that is less frequently access, but requires rapid access when needed
+        * Lower cost than general purpose, but cost application on retrieval
+
+                2A) Amazone S3 Standard-Infrequent Access (IA):        
+                        * 99.9% Availability
+                        * Use Cases: Disaster Recovery, Backups
+
+                2B) Amazon S3 One Zone-Infrequent Access:
+                        * High durability(99.999999999) in a single AZ, but lost when AZ is destroyed
+                        * 99.5% Availability
+                        * Use Cases: Storing secondary backup copies on-premise data, or data you can recreate
+   
+3) Glacier
+        * Low cost object storage meant for archiving/backup
+        * Pricing: price for storage + object retrieval cost
+
+                3A) Amazon S3 Glacier Instance Retrieval:
+                        * Millisecond retieval, great for data accessed once a quarter
+                        * Minimum storage duration of 90 days
+
+                3B) Amazon S3 Glacier Flexible Retrieval:
+                        * Expedited (1 to 5 minutes), Standard (3 to 5 hours), Bulk (5 to 12 hours) - free
+                        * Minimum storage duration of 90 days
+                        
+                3C) Amazon S3 Deep Archive - for longterm storage: 
+                        * Standard (12 hours), Bulk (48 hours)
+                        * Minimum storage duration of 180 days
+
+4) Amazon S3 Intelligent Tiering
+        * Small monthly monitoring and auto-tiering fee
+        * Moves objects automatically between access tiers based on usage
+        * There are no retrieval charges 
+
+                4A) Frequent Access tier (automatic): default tier
+                4B) Infrequent Access tier (automatic): object not accessed for 30 days
+                4C) Archive Instant Access tier (automatic): object not accessed for 90 days
+                4D) Archive Access tier (optinoal): configurable from 90 days to 700+ days
+                4E) Deep Archive Access tier (optinoal):   configurable from 180 days to 700+ days
                 
+------------------------------------------------------------------------------------------------------
+
+AWS Snow Family:
+
+* Highly-secure, portable devices to collect and process data at the edge, and migrate data in and out of AWS
+* Use-cases:
+        a) Data Migration
+                - Snowball Edge
+                        * Physical data transport solution: TBs or PBs in or out of AWS
+                        * Alternative to moving data over network
+                        * pay per data trnasfer job
+                        * provide block storage and Amazon S3-compatible object storage
+                        * Snowball Edge storage optimized(80TB of HDD or 210TB NVMe capacity for block volume and S3    compatible object storge)
+                        * Snowball Edge compute optimized(42TB of HDD or 28TB NVMe capacity for block volume and S3 compatible object storge)
+                        * Use cases: large data cloud migrations, DC decommission, disaster recovery
+                - Snowcone
+                        * Small, portable computing, anywhere, rugged & secure, withstands harsh environments
+                        * Light (2.1Kg)
+                        * Device used for Edge computing, storage and data transfer
+                        * Snowcone - 8TB of HDD Storage
+                        * Snowcone SSD - 14TB SSD Storage
+                        * Use Snowcone where Snowball doesn't fit(Space-constrained environment)
+                        * Must provide your own battery/cables
+                        * Can be sent back to AWS offline, or connect it to internet and use AWS DataSync to send data.
+                - Snowmobile 
+                        * They send us a big truck
+                        * Transfer exabytes of date (1EB = 1000PB = 1,000,000TBs)
+                        * Each snowmobile has 100PB of capacity (use multiple in parallel)
+                        * High security: temperature controlled, GPS, 24/7 video surveillance
+                        * Better than snowball if you transfer more than 10PB
+
+        b) Edge Computing (locations or anyother which doesn't have internet access)
+                - Snowball Edge
+                - Snowcone
+
+------------------------------------------------------------------------------------------------------
+
+AWS Storage Gateway:
+        * Bridge between on-premise data and cloud data in S3
+        * Hybrid storage service to allow on-premises to seamlessly use the AWS cloud
+        * Use Cases: disaster recovery, backup and restore, tiered storage
