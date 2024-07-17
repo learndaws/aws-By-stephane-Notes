@@ -258,3 +258,37 @@ AWS Storage Gateway:
         * Bridge between on-premise data and cloud data in S3
         * Hybrid storage service to allow on-premises to seamlessly use the AWS cloud
         * Use Cases: disaster recovery, backup and restore, tiered storage
+
+------------------------------------------------------------------------------------------------------
+
+Databases and Analystics Summary in AWS:
+
+        * Relational Databases - OLTP: RDS & Aurora (SQL)
+        * In-memory Database: Elastic Cache
+        * Key/Value Database: DynamoDB (Serverless) & DAX (Cache for DynamoDB)
+        * Warehouse - OLAP (Redshift) (SQL)
+        * Hadoop cluster - EMR
+        * Athena: Query data on Amazon S3 (Serverless & SQL)
+        * Qucksight: dashboards on your data (Serverless)
+        * DocumentDB: "Aurora for MongoDB" (JSON - NoSQL Database)
+        * Amazon QLDB: Financial Transactions Ledger (immutable journal, cryptographically verifiable)
+        * Amazon Managed Blockchain: Managed Hyperledger Fabric & Ethereum Blockchains
+        * Glue: Managed ETL (Extract Transform Load) and Data Catalogue Service
+        * Database Migration: DMS
+        * Neptune: Graph Database
+        * Timestream: Time-series database
+
+   -> SQL Databases: RDS, Aurora, Redshift, Athena
+   -> NoSQL Databases: DynamoDB, DocumentDB
+   -> Serverless: DynamoDB, Athena, Qucksight
+
+        * RDS Multi-AZ deployments’ main purpose is high availability
+        * RDS Read replicas’ main purpose is scalability
+        * Multi-Region deployments’ main purpose is disaster recovery and local performance.
+
+
+
+
+
+
+Note: Need to learn S3 Storage Snow family.
