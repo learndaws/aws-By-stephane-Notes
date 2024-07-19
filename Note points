@@ -45,13 +45,17 @@ Four different types of cloud computing:
           Example from AWS : Lambda
         Example from Others: "Need to update"
 
+* Container as a Service (CaaS)
+          Example from AWS : Amazon Elastic Container Service (ECS), Fargate
+        Example from Others: Google Kubernetes Engine (GKE), Azure Kubernetes Service (AKS)       
+
 ------------------------------------------------------------------------------------------------------
 
 Three pricing fundamentals of Cloud (Pay-as-you-go):
 
-Computing - Pay for compute time
-Storage - Pay for on the amount of data stored
-Netowrking - Pay only for amount of outgoing traffic i.e., from cloud.. Amount of Incoming traffic data is free
+* Computing - Pay for compute time
+* Storage - Pay for on the amount of data stored
+* Netowrking - Pay only for amount of outgoing traffic i.e., from cloud.. Amount of Incoming traffic data is free
 
 ------------------------------------------------------------------------------------------------------
 
@@ -255,38 +259,73 @@ AWS Snow Family:
 ------------------------------------------------------------------------------------------------------
 
 AWS Storage Gateway:
-        * Bridge between on-premise data and cloud data in S3
-        * Hybrid storage service to allow on-premises to seamlessly use the AWS cloud
-        * Use Cases: disaster recovery, backup and restore, tiered storage
+
+* Bridge between on-premise data storage and cloud data storage in S3
+* Hybrid storage service to allow on-premises to seamlessly use the AWS cloud
+* Use Cases: disaster recovery, backup and restore, tiered storage
 
 ------------------------------------------------------------------------------------------------------
 
 Databases and Analystics Summary in AWS:
 
-        * Relational Databases - OLTP: RDS & Aurora (SQL)
-        * In-memory Database: Elastic Cache
-        * Key/Value Database: DynamoDB (Serverless) & DAX (Cache for DynamoDB)
-        * Warehouse - OLAP (Redshift) (SQL)
-        * Hadoop cluster - EMR
-        * Athena: Query data on Amazon S3 (Serverless & SQL)
-        * Qucksight: dashboards on your data (Serverless)
-        * DocumentDB: "Aurora for MongoDB" (JSON - NoSQL Database)
-        * Amazon QLDB: Financial Transactions Ledger (immutable journal, cryptographically verifiable)
-        * Amazon Managed Blockchain: Managed Hyperledger Fabric & Ethereum Blockchains
-        * Glue: Managed ETL (Extract Transform Load) and Data Catalogue Service
-        * Database Migration: DMS
-        * Neptune: Graph Database
-        * Timestream: Time-series database
+* Relational Databases - OLTP: RDS & Aurora (SQL)
+* In-memory Database: Elastic Cache
+* Key/Value Database: DynamoDB (Serverless) & DAX (Cache for DynamoDB)
+* Warehouse - OLAP (Redshift) (SQL)
+* Hadoop cluster - EMR
+* Athena: Query data on Amazon S3 (Serverless & SQL)
+* Qucksight: dashboards on your data (Serverless)
+* DocumentDB: "Aurora for MongoDB" (JSON - NoSQL Database)
+* Amazon QLDB: Financial Transactions Ledger (immutable journal, cryptographically verifiable)
+* Amazon Managed Blockchain: Managed Hyperledger Fabric & Ethereum Blockchains
+* Glue: Managed ETL (Extract Transform Load) and Data Catalogue Service
+* Database Migration: DMS
+* Neptune: Graph Database
+* Timestream: Time-series database
 
    -> SQL Databases: RDS, Aurora, Redshift, Athena
    -> NoSQL Databases: DynamoDB, DocumentDB
-   -> Serverless: DynamoDB, Athena, Qucksight
+   -> Serverless: DynamoDB, Athena, Qucksight  (Someother: Amazon S3, Fargate, Lambda, Cloudwatch, API Gateway)
 
-        * RDS Multi-AZ deployments’ main purpose is high availability
-        * RDS Read replicas’ main purpose is scalability
-        * Multi-Region deployments’ main purpose is disaster recovery and local performance.
+* RDS Multi-AZ deployments’ main purpose is high availability
+* RDS Read replicas’ main purpose is scalability
+* Multi-Region deployments’ main purpose is disaster recovery and local performance.
 
+------------------------------------------------------------------------------------------------------
 
+Amazon Ec2 instance Vs Lambda:
+
+* Ec2 Instance
+  ------------
+        - We have an virtual server in the cloud
+        - Limited by RAM and CPU
+        - Continously running
+        - Scaling means intervention to add/remove servers
+
+* Lambda
+  ------
+        - Virtual funtions - No servers to manage
+        - Limited by time - short executions
+        - Run on-demand
+        - Scaling is automated!
+
+------------------------------------------------------------------------------------------------------
+
+AWS Batch Vs Lambda:
+
+* AWS Batch
+  ------------
+        - No Time limit
+        - Any runtime as long as it's packaged as a docker image
+        - Relies on EBS/Instance Store for disk space
+        - It's not a serverless 
+
+* Lambda
+  ------
+        - Time limit
+        - Limited runtimes
+        - Limited temporary disk space
+        - Serverless
 
 
 
