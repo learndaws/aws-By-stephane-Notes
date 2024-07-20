@@ -47,7 +47,11 @@ Four different types of cloud computing:
 
 * Container as a Service (CaaS)
           Example from AWS : Amazon Elastic Container Service (ECS), Fargate
-        Example from Others: Google Kubernetes Engine (GKE), Azure Kubernetes Service (AKS)       
+        Example from Others: Google Kubernetes Engine (GKE), Azure Kubernetes Service (AKS)     
+
+* Infrastructure as a Code (IaC)
+          Example from AWS : CloudFormation
+        Example from Others: "Need to update"  
 
 ------------------------------------------------------------------------------------------------------
 
@@ -285,7 +289,7 @@ Databases and Analystics Summary in AWS:
 
    -> SQL Databases: RDS, Aurora, Redshift, Athena
    -> NoSQL Databases: DynamoDB, DocumentDB
-   -> Serverless: DynamoDB, Athena, Qucksight  (Someother: Amazon S3, Fargate, Lambda, Cloudwatch, API Gateway)
+   -> Serverless: DynamoDB, Athena, Qucksight  (Someother: Amazon S3, Fargate, Lambda, Cloudwatch, API Gateway, AWS Code Build)
 
 * RDS Multi-AZ deployments’ main purpose is high availability
 * RDS Read replicas’ main purpose is scalability
@@ -326,6 +330,24 @@ AWS Batch Vs Lambda:
         - Limited runtimes
         - Limited temporary disk space
         - Serverless
+
+------------------------------------------------------------------------------------------------------
+
+Global Applications in AWS:
+
+* Global DNS: Route53
+        - Great to route users to the closest deployment with least latency
+        - Great for disaster recovery strategies
+
+* Global Content Delivery Network(CDN): CloudFront
+        - Replicate part of your application to AWS Edge locations - decrease latency
+        - Cache common requests - improved user experience and decreased latency
+
+* S3 Transfer Acceleration
+        - Accelerate global uploads and downloads into Amazon S3
+
+* AWS Global Accelerator
+        - Improve global application availability and performance using the AWS Global Network
 
 
 
