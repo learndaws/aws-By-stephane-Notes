@@ -289,7 +289,7 @@ Databases and Analystics Summary in AWS:
 
    -> SQL Databases: RDS, Aurora, Redshift, Athena
    -> NoSQL Databases: DynamoDB, DocumentDB
-   -> Serverless: DynamoDB, Athena, Qucksight  (Someother: Amazon S3, Fargate, Lambda, Cloudwatch, API Gateway, AWS Code Build)
+   -> Serverless: DynamoDB, Athena, Qucksight  (Someother: Amazon S3, Fargate, Lambda, Cloudwatch, API Gateway, AWS Code Build, Amazon SQS)
 
 * RDS Multi-AZ deployments’ main purpose is high availability
 * RDS Read replicas’ main purpose is scalability
@@ -349,7 +349,36 @@ Global Applications in AWS:
 * AWS Global Accelerator
         - Improve global application availability and performance using the AWS Global Network
 
+------------------------------------------------------------------------------------------------------
 
+Application de-coupling Services:
+
+* SQS (Simple Queueing Service) --> Cloud Native
+        - Producer send message to SQS and consumer reads it and delete it.
+        - Multiple producers can send the messages and read by multiple consumers.
+        - Let say producer-A sends message and consumer-1 reading it and during this process which means before deletion of message by consumer-1, consumer-2 can be able able to read it but if consumer-1 reads and deletes the messages and now consumer-2 will not be able to read the message.
+        - Default retention of message-4 days, and maximum-14days.
+
+* SNS (Simple Notification Service) --> Cloud Native
+        - SNS is a pub/sub (publish/subscribe) messaging system.
+        - It allows you to send messages to multiple subscribers (e.g., email, HTTP endpoints, SQS queues).
+        - Messages are immediately sent to all subscribers once they are published.
+        - It supports multiple protocols, such as HTTP/HTTPS, email, SMS, and SQS.
+        - Messages are not stored; they are sent to subscribers immediately and not retained.
+        - Single message sent by publisher to SNS topic, it will be immediately delivered to all the subscribers who are in subscriber list.
+
+* Kinesis--> Cloud Native
+        - It's a real-time big data streaming
+        - Managed service to collect, process, and analyze real-time streaming data at any scale
+        - 
+
+* Amazon MQ--> Cloud Native
+        - Traditional applications running from on-premises may use open protocols such as: MQTT, AMQP, STOMP, Openwire, WSS
+        - When migrating to cloud instead of re-engineering the application to use SQS and SNS, we caan use Amazon MQ
+        - Amazon MQ is a managed message broker serice for "Rabbit MQ" and "Active MQ"
+        - Amazon MQ doesn't scale as much as SQS/SNS
+        - Amazon MQ run on Server, can run in Multi-AZ with failover
+        - Amazon MQ has both queue feature (~SQS) and topic feature (~SNS)
 
 
 Note: Need to learn S3 Storage Snow family.
