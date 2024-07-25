@@ -370,7 +370,6 @@ Application de-coupling Services:
 * Kinesis--> Cloud Native
         - It's a real-time big data streaming
         - Managed service to collect, process, and analyze real-time streaming data at any scale
-        - 
 
 * Amazon MQ--> Cloud Native
         - Traditional applications running from on-premises may use open protocols such as: MQTT, AMQP, STOMP, Openwire, WSS
