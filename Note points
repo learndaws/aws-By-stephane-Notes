@@ -289,7 +289,7 @@ Databases and Analystics Summary in AWS:
 
    -> SQL Databases: RDS, Aurora, Redshift, Athena
    -> NoSQL Databases: DynamoDB, DocumentDB
-   -> Serverless: DynamoDB, Athena, Qucksight  (Someother: Amazon S3, Fargate, Lambda, Cloudwatch, API Gateway, AWS Code Build, Amazon SQS)
+   -> Serverless: DynamoDB, Athena, Qucksight  (Someother: Amazon S3, Fargate, Lambda, Cloudwatch, API Gateway, AWS Code Build, Amazon SQS, Amazon Comprehend, AWS Organizations)
 
 * RDS Multi-AZ deployments’ main purpose is high availability
 * RDS Read replicas’ main purpose is scalability
